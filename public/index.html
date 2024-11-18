@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syllabus Chatbot - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div id="welcome-section" class="welcome-section">
+            <div class="logo">Syllabus Chatbot</div>
+            <p class="welcome-text">Welcome to the Syllabus Chatbot system.</p>
+        </div>
+        
+        <!-- Role Selection Container -->
+        <div id="role-selection-container" class="role-selection">
+            <div class="role-card" id="professor-role">
+                <img src="img/professor.png" alt="Professor" class="role-image">
+                <p class="role-title">Professor</p>
+            </div>
+            <div class="role-card" id="student-role">
+                <img src="img/student.png" alt="Student" class="role-image">
+                <p class="role-title">Student</p>
+            </div>    
+        </div>
+
+        <!-- Root element where the sign-in page will be dynamically loaded -->
+        <div id="root"></div>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../ProfHome.css" rel="stylesheet">
+</head>
+<body>
+
+
+        <!-- Upload Section -->
+            <section class="upload-section">
+                <h2>Upload New Syllabus</h2>
+                <form class="upload-form">
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <select id="department" required>
+                            <option value="">Select Department</option>
+                            <option value="cs">Computer Science</option>
+                            <option value="math">Mathematics</option>
+                            <option value="physics">Physics</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="courseNumber">Course Number</label>
+                        <input type="text" id="courseNumber" placeholder="e.g., CS101" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="courseName">Course Name</label>
+                        <input type="text" id="courseName" placeholder="e.g., Introduction to Programming" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="semester">Semester</label>
+                        <select id="semester" required>
+                            <option value="">Select Semester</option>
+                            <option value="fall2024">Fall 2024</option>
+                            <option value="spring2025">Spring 2025</option>
+                            <option value="summer2025">Summer 2025</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="syllabus">Upload Syllabus (PDF)</label>
+                        <div class="file-upload-area">
+                            <input type="file" id="syllabus" accept=".pdf" required>
+                            <div class="upload-text">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Drag and drop your syllabus here or click to browse</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Additional Metadata</label>
+                        <div class="metadata-fields">
+                            <label>
+                                <input type="checkbox" name="metadata" value="prerequisites">
+                                Has Prerequisites
+                            </label>
+                            <label>
+                                <input type="checkbox" name="metadata" value="textbook">
+                                Required Textbook
+                            </label>
+                            <label>
+                                <input type="checkbox" name="metadata" value="online">
+                                Online Course
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary">Upload Syllabus</button>
+                        <button type="reset" class="btn-secondary">Clear Form</button>
+                    </div>
+                </form>
+            </section>
+
+            </body>
+</html>
