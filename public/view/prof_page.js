@@ -1,11 +1,12 @@
 import { root } from "./elements.js";
-import { signinFirebase } from "../controller/firebase_auth.js";
+import { signinFirebase, signOutFirebase } from "../controller/firebase_auth.js";
 
 export async function ProfHomePageView()
 {
-
+    const welcomeContainer = document.getElementById("welcome-section");
+    welcomeContainer.style.display = "none";
+    document.getElementsByClassName('logout-btn').onClick = signOutFirebase();
     
-
     const response = await fetch('/view/templates/prof_page_template.html',
     {cache:'no-store'}
     );
@@ -19,3 +20,4 @@ export async function ProfHomePageView()
     root.innerHTML = ' '; //clear current page rendering 
     root.appendChild(divWrapper);
 }
+

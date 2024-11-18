@@ -7,6 +7,7 @@ import {
   import { app } from "./firebase_core.js";
   import { signinPageView } from "../view/signin_page.js";
 import { ProfHomePageView } from "../view/prof_page.js";
+import { routePathnames } from "./route_controller.js";
   
   export const auth = getAuth(app);
   export let currentUser = null;
@@ -58,7 +59,10 @@ export function getRoleSelected() {
   
   export async function signOutFirebase() {
       await signOut(auth);
+     
       console.log("User signed out.");
       roleSelected = false; // Reset the flag after sign-out
+      history.pushState(null, null, routePathnames.SIGNIN);
+
   }
   
